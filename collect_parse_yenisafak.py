@@ -23,7 +23,7 @@ from datetime import date
 hdr = {'User-Agent': 'Mozilla/5.0'} #header settings
 
 
-
+## pick any keyword you want to search for
 keywords = ["erdoğan", "kılıçdaroğlu", "bahçeli", "demirtaş"]
 
 
@@ -41,8 +41,8 @@ links_whole = []
 for singlekeyword in keywords:
     keyword = singlekeyword+ "?"+ "word=" + singlekeyword
 
-    # first generate the urls that will list the news articles with the desired keyword and within the specified time range. Note that this will only look at the first 5 pages of articles that contain the keyword within the specified time range.
-
+    # first generate the urls that will list the news articles with the desired keyword and within the specified time range. 
+    # Note that this will only look at the first 5 pages of articles that contain the keyword within the specified time range.
     for i in range(1,5):
         link = base + keyword + "&"+ "page=" + "{}".format(i) + "&" + searchdate
 
