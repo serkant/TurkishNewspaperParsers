@@ -141,7 +141,8 @@ d["article_url"]  = links_gathered
 d["article_date"] = extracted_dates
 
 
-name_d = str(start_date) + "_to_"+ str(end_date) + ".xlsx"
+name_d = f"{start_date}_to_{end_date}.xlsx"
+
 
 
 d.to_excel(name_d)
