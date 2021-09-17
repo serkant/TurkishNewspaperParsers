@@ -1,6 +1,7 @@
 """
 Author: Fatih Serkant Adiguzel
-This script collects URLs for Sol newspaper using wayback's cdx server. It then uses newspaper3k to extract title and main text. Since newspaper3k cannot extract dates, I extract them using beautifulsoup.
+This script collects URLs for Sol newspaper using wayback's cdx server. 
+It then uses newspaper3k to extract title and main text. Since newspaper3k cannot extract dates, I extract them using beautifulsoup.
 """
 import requests as rq
 from bs4 import BeautifulSoup
