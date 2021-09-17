@@ -1,4 +1,3 @@
-===
 Turkish Newspaper Parsers
 ===
 
