@@ -1,3 +1,9 @@
+"""
+Author: Fatih Serkant Adiguzel
+This script collects URLs from a specified day using Hurriyet's digital archive. It uses newspaper3k library to parse maintext and title. However, we need a custom function to parse the newspaper article's publish date.
+
+"""
+
 from bs4 import BeautifulSoup, SoupStrainer
 import requests
 import re
@@ -63,7 +69,7 @@ for index, haber in enumerate(selected_links):
 #removing duplicate links.
 links3k_unique = list(set(links3k)) 
 
-#I wrote a custom date extractor since newspaper3k did not work for dates.
+#A custom date extractor since newspaper3k did not work for dates.
 def date_extract(html):
     hold_dict = {}
     soup = BeautifulSoup(html, "lxml")
