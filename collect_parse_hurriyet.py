@@ -1,6 +1,8 @@
 """
 Author: Fatih Serkant Adiguzel
-This script collects URLs from a specified day using Hurriyet's digital archive. It uses newspaper3k library to parse maintext and title. However, we need a custom function to parse the newspaper article's publish date.
+This script collects URLs from a specified day using
+Hurriyet's digital archive. It uses newspaper3k library to
+parse maintext and title. However, we need a custom function to parse the newspaper article's publish date.
 """
 
 from bs4 import BeautifulSoup, SoupStrainer
@@ -74,7 +76,7 @@ def date_extract(html):
     soup = BeautifulSoup(html, "lxml")
     date = soup.find("span", {"class": "rhd-time-box-text"}).text
     pattern_date = r'.*?:(.*)-.*'
-    match = re.search(pat, pattern_date)
+    match = re.search(pattern_date, date)
     parsed = match.group(1)
     hold_dict['date'] = parsed
     return hold_dict
