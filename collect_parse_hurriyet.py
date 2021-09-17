@@ -1,7 +1,6 @@
 """
 Author: Fatih Serkant Adiguzel
 This script collects URLs from a specified day using Hurriyet's digital archive. It uses newspaper3k library to parse maintext and title. However, we need a custom function to parse the newspaper article's publish date.
-
 """
 
 from bs4 import BeautifulSoup, SoupStrainer
