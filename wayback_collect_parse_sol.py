@@ -47,7 +47,8 @@ print(len(final_urls))
 ## We do not need many of the links wayback archive (such as the main page) 
 ## Let's prepare a list of url patterns we want
 
-includelist = ["medya", 'kent-gundemleri', 'haberleri', 'enternasyonal-gundem', 'elestiri-noktasi', 'ekonomi', 'dunyasoladonuyor', 'dunyadan', 'devlet_ve_siyaset', 'devlet-ve-siyaset', 'yazino', 'kentgundemleri', 'mansetler']
+includelist = ["medya", 'kent-gundemleri', 'haberleri', 'enternasyonal-gundem', 'elestiri-noktasi', 'ekonomi', 
+'dunyasoladonuyor', 'dunyadan', 'devlet_ve_siyaset', 'devlet-ve-siyaset', 'yazino', 'kentgundemleri', 'mansetler']
 
 included = []
 for url in final_urls:
@@ -129,7 +130,7 @@ d["article_date"] = final_dates
 
 
 
-name_d = f"wayback_sol{start_year}_to_{end_year}.xlsx"
+name_d = f"wayback_sol_{start_year}_to_{end_year}.xlsx"
 
 d.to_excel(name_d)
 
