@@ -66,7 +66,7 @@ links = []
 titles = []
 for index, link in enumerate(included):
 
-    print("Parsing", index, "Progress:", index/len(included), "within", index_first, "---", index_second)
+    print("Parsing", index, "Progress:", index/len(included))
 
 
     if link.endswith('.rss'):
