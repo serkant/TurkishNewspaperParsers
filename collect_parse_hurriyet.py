@@ -101,11 +101,6 @@ for index, link3k in enumerate(links3k_unique):
     except newspaper.article.ArticleException:
         continue
 
-    try:
-        response = requests.get(link3k, headers=hdr)
-    except requests.exceptions.ConnectionError:
-        continue
-
     main_text = article.text
     main_texts.append(main_text)
 
@@ -117,7 +112,7 @@ for index, link3k in enumerate(links3k_unique):
 
     
     
-    content = response.content
+    content = article.html
 
     try:
         extracted_date = date_extract(content)
